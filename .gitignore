@@ -8,6 +8,8 @@ env/
 venv/
 .venv/
 
+*.json
+
 # Jupyter
 .ipynb_checkpoints/
 
