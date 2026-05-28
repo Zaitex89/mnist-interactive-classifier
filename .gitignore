@@ -9,6 +9,7 @@ venv/
 .venv/
 
 *.json
+*.keras
 
 # Jupyter
 .ipynb_checkpoints/
