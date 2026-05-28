@@ -1,18 +1,7 @@
-# HandDigit AI — MNIST Handwritten Digit Classifier
+# HandDigit AI MNIST Handwritten Digit Classifier
 
 An interactive handwritten digit classifier built with TensorFlow and Streamlit. Train a neural network on the MNIST dataset, upload your own digit images for prediction, and teach the model from your corrections — all through a clean web interface.
 
----
-
-## Repo name suggestion
-
-**`handdigit-ai`** or **`mnist-interactive-classifier`**
-
-## Description (for GitHub)
-
-> Interactive MNIST digit classifier with online learning. Train a neural network, predict handwritten digits from uploaded images, and improve the model in real time by correcting its mistakes — changes are saved permanently to disk.
-
----
 
 ## Project structure
 
@@ -66,10 +55,10 @@ source .venv/bin/activate
 
 The notebook is a step-by-step walkthrough of the full ML pipeline. Run cells top to bottom.
 
-### Cell 1 — Imports
+### Cell 1 Imports
 Loads TensorFlow, NumPy, Matplotlib, Seaborn, and scikit-learn.
 
-### Cell 2 — Train the model
+### Cell 2 Train the model
 - Downloads the MNIST dataset (60 000 training images, 10 000 test images)
 - Normalises pixel values to 0–1
 - Builds a 3-layer neural network:
@@ -80,16 +69,16 @@ Loads TensorFlow, NumPy, Matplotlib, Seaborn, and scikit-learn.
 - Trains for 5 epochs with 20 % validation split
 - Evaluates on the test set (~97 % accuracy)
 
-### Cell 3 — EDA (Exploratory Data Analysis)
+### Cell 3 EDA (Exploratory Data Analysis)
 - Bar chart showing how many samples exist per digit class
 - Grid of 10 sample images with their labels
 
-### Cell 4 — Confusion matrix & classification report
+### Cell 4 Confusion matrix & classification report
 - Runs predictions on all 10 000 test images
 - Plots a heatmap of the confusion matrix — rows are true labels, columns are predicted labels
 - Prints per-class precision, recall, and F1-score
 
-### Cell 5 — Training curves
+### Cell 5 Training curves
 - Side-by-side line plots of accuracy and loss for both the training and validation sets across all 5 epochs
 
 ### How to run
@@ -100,7 +89,7 @@ Loads TensorFlow, NumPy, Matplotlib, Seaborn, and scikit-learn.
 
 ---
 
-## Streamlit App — `app.py`
+## Streamlit App `app.py`
 
 A full web interface for the model with four pages accessible from the left sidebar.
 
@@ -115,7 +104,7 @@ The app opens automatically at `http://localhost:8501`.
 
 ---
 
-### Page 1 — Predict
+### Page 1 Predict
 
 Upload a photo of a handwritten digit and the model will predict what number it is.
 
@@ -137,7 +126,7 @@ Every time you give feedback the model weights are updated immediately and **sav
 
 ---
 
-### Page 2 — Train Model
+### Page 2 Train Model
 
 Train a fresh model from scratch on the full MNIST dataset.
 
@@ -150,7 +139,7 @@ Train a fresh model from scratch on the full MNIST dataset.
 
 ---
 
-### Page 3 — EDA
+### Page 3 EDA
 
 Explore the MNIST dataset visually without writing any code.
 
@@ -160,7 +149,7 @@ Explore the MNIST dataset visually without writing any code.
 
 ---
 
-### Page 4 — Evaluate
+### Page 4 Evaluate
 
 Measure how well the current model performs on the 10 000 held-out test images.
 
